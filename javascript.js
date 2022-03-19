@@ -19,3 +19,39 @@ function computerPlay() {
         return choice;
     }
 }
+
+function singleRound(playerSelection, computerSelection){
+
+    let result = 0; //initializing result variable
+    let capsPlayerSelection = playerSelection.toUpperCase();
+
+    if(capsPlayerSelection == "ROCK" && computerSelection == "Rock"){
+        let result = 2;     
+        return[result,"It's a tie! Choose again"];   
+    }else if(capsPlayerSelection == "ROCK" && computerSelection == "Paper"){
+        let result = 1;
+        return[result,"You Lose! Paper beats Rock"];
+    }else if(capsPlayerSelection == "ROCK" && computerSelection == "Scissors"){
+        let result = 0;
+        return[result,"You Win! Rock beats Scissors"];
+    }else if(capsPlayerSelection == "PAPER" && computerSelection == "Rock"){
+        let result = 0;
+        return[result,"You Win! Paper beats Rock"];
+    }else if(capsPlayerSelection == "PAPER" && computerSelection == "Paper"){
+        let result = 2;
+        return[result,"It's a tie! Choose again"];
+    }else if(capsPlayerSelection == "PAPER" && computerSelection == "Scissors"){
+        let result = 1;
+        return[result, "You Lose! Scissors beat Paper"];
+    }else if(capsPlayerSelection == "SCISSORS" && computerSelection == "Rock"){
+        let result = 1;
+        return[result,"You Lose! Rock beats Paper"];
+    }else if(capsPlayerSelection == "SCISSORS" && computerSelection == "Paper"){
+        let result = 0;
+        return[result, "You Win! Scissors beat Paper"];
+    }else if(capsPlayerSelection == "SCISSORS" && computerSelection == "Scissors"){
+        let result = 2;
+        return[result,"It's a tie! Choose again"];
+    }else
+    console.log("Something went wrong...make sure you spelled your choice correctly!");
+}
