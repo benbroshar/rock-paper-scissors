@@ -55,3 +55,26 @@ function singleRound(playerSelection, computerSelection){
     }else
     console.log("Something went wrong...make sure you spelled your choice correctly!");
 }
+
+function game(){ //plays 5 rounds of RPS, keeps track of score
+    var score = 0; //initializing global score variable
+    for(let i = 0; i < 5; i++){
+
+        let userChoice = window.prompt("Choose your fighter! Rock, paper, or scissors.","Enter your choice here");
+        let outcome = singleRound(userChoice,computerPlay());
+        console.log(outcome[1])
+        if(outcome[0] == 0){
+            score = ++score
+        }else if(outcome[0] == 2){
+            i = --i;
+        }else if(outcome[0] == 1){
+            
+        }else
+        console.log("Something went wrong...")
+    }
+
+    if(score >= 3){
+        return `Congratulations! You have won with a score of ${score}!`;
+    }else
+        return `We're so sorry, but a score of ${score} means you are the loser`;
+}
