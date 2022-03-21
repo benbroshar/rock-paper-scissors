@@ -14,6 +14,7 @@ body {
 #rock-button, #paper-button, #scissor-button {
     width:200px;
     height:auto;
+    transition:all 0.07s
 }
 
 h1 {

@@ -1,9 +1,26 @@
 //adding eventListeners
 
-let buttonManager = document.getElementById("rock-button");
-buttonManager.addEventListener("mouseover",function(e){
-console.log(e)
-});
+const rockButtonManager = document.getElementById("rock-button");
+rockButtonManager.addEventListener("mouseover",lightup);
+rockButtonManager.addEventListener("mouseout",revert);
+
+const paperButtonManager = document.getElementById("paper-button");
+paperButtonManager.addEventListener("mouseover",lightup);
+paperButtonManager.addEventListener("mouseout",revert);
+
+const scissorButtonManager = document.getElementById("scissor-button");
+scissorButtonManager.addEventListener("mouseover",lightup);
+scissorButtonManager.addEventListener("mouseout",revert);
+
+function lightup(e){
+    const target = document.querySelector(`#${e.target.id}`);
+    target.classList.add('moused-over');
+};
+
+function revert(e){
+    const target = document.querySelector(`#${e.target.id}`);
+    target.classList.remove('moused-over');
+}
 
 //function mousedOver(e){
 //
