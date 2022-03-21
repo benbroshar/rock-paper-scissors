@@ -1,0 +1,30 @@
+body {
+    display:flex;
+    flex-direction: column;
+    background-color: black;
+}
+
+.button-wrapper {
+    display:flex;
+    justify-content: space-around;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+#rock-button, #paper-button, #scissor-button {
+    width:200px;
+    height:auto;
+}
+
+h1 {
+    color:white;
+}
+
+img {
+    opacity: 0.4;
+}
+
+.moused-over{
+    opacity: 1;
+    transform: scale(1.2);
+}

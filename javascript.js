@@ -1,3 +1,19 @@
+//adding eventListeners
+
+let buttonManager = document.getElementById("rock-button");
+buttonManager.addEventListener("mouseover",function(e){
+console.log(e)
+});
+
+//function mousedOver(e){
+//
+//}
+
+
+
+
+
+
 // First, setup function computerPlay that chooses R P or S randomly
 
 function computerPlay() {
